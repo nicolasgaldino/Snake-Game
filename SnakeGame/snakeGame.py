@@ -6,10 +6,10 @@ from random import randint
 pygame.init()
 
 pygame.mixer.music.set_volume(0.50)
-musica_de_fundo = pygame.mixer.music.load('./SnakeGame/BoxCat Games - Mt Fox Shop.mp3')
+musica_de_fundo = pygame.mixer.music.load('./BoxCat Games - Mt Fox Shop.mp3')
 pygame.mixer.music.play(-1)
 
-colid_song = pygame.mixer.Sound('./SnakeGame/smw_kick.wav')
+colid_song = pygame.mixer.Sound('./smw_kick.wav')
 colid_song.set_volume(1)
 
 largura = 640
@@ -108,7 +108,7 @@ while True:
   snake_body.append(snake_head)
 
   if snake_body.count(snake_head) > 1:
-    mensagem_morreu = 'Para tentar novamente digite "R".'
+    mensagem_morreu = 'Para tentar novamente digite "A".'
     texto_morreu = fonte.render(mensagem_morreu, True, (0, 0, 0))
     ret_texto = texto_morreu.get_rect()
     morreu = True
@@ -119,7 +119,7 @@ while True:
           pygame.quit()
           exit()
         if event.type == KEYDOWN:
-          if event.key == K_r:
+          if event.key == K_a:
             reiniciar()
       ret_texto.center = (largura // 2, altura // 2)
       tela.blit(texto_morreu, ret_texto)
